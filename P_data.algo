@@ -1,0 +1,21 @@
+ALGORITHM sum_of_distinct
+VAR
+    set1 :  array := [3, 1, 7, 9];
+    set2 :  array := [2, 4, 1, 9, 3];
+    sum : INTEGER := 0;
+    distinct_elements :  array := [];
+BEGIN
+    FOR i FROM 0 TO 3 STEP 1  DO
+        IF (set1[i] not in set2) THEN
+            distinct_elements=distinct_elements+set1[i]
+            sum =sum+set1[i]
+        END_IF
+    FOR i FROM 0 TO 4 STEP 1  DO
+         IF (set2[i] not in set1) THEN
+            distinct_elements=distinct_elements+set2[i]
+            sum =sum+set2[i]
+        END_IF
+    Write(distinct_elements,"sum=",sum)
+    END_FOR
+    END_FOR
+END
